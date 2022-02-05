@@ -1,6 +1,6 @@
 # yo-buildabanner
 
-This image containerized [Yeoman](https://yeoman.io/) and the [Buildabanner Generator](https://github.com/johnfmorton/generator-buildabanner). It is currently in _beta_ and your feedback is welcome.
+This image containerized [Yeoman](https://yeoman.io/) and the [Buildabanner Generator](https://github.com/johnfmorton/generator-buildabanner). It is currently in _beta_ and your feedback is welcome. You can post issues at the [GitHub page issues page](https://github.com/johnfmorton/docker-build-a-banner/issues).
 
 ## How to use the image
 
