@@ -1,7 +1,8 @@
 ARG TAG=16-alpine
 FROM node:$TAG
 
-EXPOSE 8080/tcp
+## Expose 8080 for the web server and 35729 for the LiveReload service
+EXPOSE 8080/tcp 35729/tcp
 
 WORKDIR /app
 

@@ -5,7 +5,7 @@
 This Dockerfile builds an image to run Yeoman and the BuildABanner generator in a Docker container.
 
 ```
-alias banner='docker container run -p 8080:8080 -v "$PWD":/app -it --rm buildabanner'
+alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm buildabanner'
 ```
 
 ### Beta notes
@@ -27,7 +27,7 @@ docker image build -t buildabanner .
 Then test your image. From your terminal, go into a new blank directory, then type the following:
 
 ```
-docker container run -p 8080:8080/tcp -v "$PWD":/app -it --rm buildabanner
+docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm buildabanner
 ```
 
 You should be presented with a new command prompt. At this point, you're inside the Docker container. Type `yo buildabanner` and you should be presented with the normal Build A Banner prompts.
@@ -44,13 +44,13 @@ docker container run -p 8080:8080/tcp -v "$PWD":/app -it --rm buildabanner
 Since this command is hard to remember, in your `rc` file, make an alias for it like this:
 
 ```
-alias banner='docker container run -p 8080:8080 -v "$PWD":/app -it --rm buildabanner'
+alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm buildabanner'
 ```
 
 It is probably easier to just use my version from Docker Hub, [johnfmorton/yo-buildabanner](https://hub.docker.com/r/johnfmorton/yo-buildabanner).
 
 ```
-alias banner='docker container run -p 8080:8080 -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta
+alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta
 ```
 
 After you open a new terminal window, this alias will be available and you can just type `banner` in the folder to get to work.

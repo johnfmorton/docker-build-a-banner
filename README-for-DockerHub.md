@@ -11,16 +11,16 @@ The default command for the image, `/bin/sh`, is give you a shell prompt. The sh
 From your terminal, navigate to an empty directory you want to build your banner in. Then enter:
 
 ```
-docker container run -p 8080:8080 -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta
+docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta
 ```
 
 If that seems like too much to remember, I agree! That's why I have it hidden behind an alias like this. This will go in your `rc` file, for example your `.bashrc` if you use bash, or `.zshrc` if you use zsh.
 
 ```
-alias banner='docker container run -p 8080:8080 -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta'
+alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta'
 ```
 
-With the alias, you can just type `banner` to start the Docker container.
+With the alias, you can just type `banner` to start the Docker container. The exposed ports are for the development server, port 8080, and it's live reload service, port 35729.
 
 ### Step 2
 
