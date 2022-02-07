@@ -22,6 +22,12 @@ alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD"
 
 With the alias, you can just type `banner` to start the Docker container. The exposed ports are for the development server, port 8080, and it's live reload service, port 35729.
 
+I also keep another alias that will update the image. The only difference is the addtional `--pull always` flag. There is no option to only pull when the image is updated, so you must check manually.
+
+```
+alias bannerupdate='docker container run -p 8080:8080 -p 35729:35729 -v "$PWD":/app -it --pull always --rm johnfmorton/yo-buildabanner:beta'
+```
+
 ### Step 2
 
 You are now inside the container. To create your banner, tell Yeoman to use the Build A Banner generator.

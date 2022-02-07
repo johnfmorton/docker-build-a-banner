@@ -1,4 +1,4 @@
-# docker-build-a-banner
+# Docker: Build A Banner
 
 ## About
 
@@ -10,7 +10,7 @@ alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD"
 
 ### Beta notes
 
-It is using a [beta version](https://www.npmjs.com/package/generator-buildabanner/v/2.1.0-beta.2) of Build A Banner.
+It is using a [beta version](https://www.npmjs.com/package/generator-buildabanner/v/2.1.0-beta.3) of Build A Banner.
 
 During testing of the beta, you will see the `@beta` tag in the Dockerfile.
 
@@ -51,6 +51,12 @@ It is probably easier to just use my version from Docker Hub, [johnfmorton/yo-bu
 
 ```
 alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta
+```
+
+I also keep another alias that will update the image. The only difference is the addtional `--pull always` flag. There is no option to only pull when the image is updated, so you must check manually.
+
+```
+alias bannerupdate='docker container run -p 8080:8080 -p 35729:35729 -v "$PWD":/app -it --pull always --rm johnfmorton/yo-buildabanner:beta'
 ```
 
 After you open a new terminal window, this alias will be available and you can just type `banner` in the folder to get to work.
