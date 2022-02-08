@@ -8,6 +8,7 @@ WORKDIR /app
 
 # Add alians for a better .zsh shell
 ADD files-to-include/.zshrc /root/.zshrc
+ADD files-to-include/insight-yo.json /root/.config/insight-nodejs/insight-yo.json
 
 # Install dependencies
 RUN set -eux; \
