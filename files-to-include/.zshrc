@@ -1,7 +1,8 @@
 PS1='%F{green}Build A Banner%F{white}: %F{red}%/%f $ ' # david@macbook /tmp $
 
+alias ....='cd ../../../'
 alias ...='cd ../../'
-alias ....='cd ../'
+alias ..='cd ../'
 alias ll="ls -lh"
 
 alias l='ls -lFh'     #size,show type,human readable
