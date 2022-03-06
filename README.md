@@ -1,8 +1,8 @@
-# Docker: Build a Banner
+# Docker: Build A Banner
 
 ## About
 
-This Dockerfile builds an image to run Yeoman and the BuildABanner generator in a Docker container.
+This Dockerfile builds an image to run Yeoman and the Build A Banner generator in a Docker container.
 
 ```
 alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm buildabanner'

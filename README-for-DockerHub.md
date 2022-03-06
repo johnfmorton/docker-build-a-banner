@@ -1,6 +1,6 @@
 # yo-buildabanner
 
-This image containerized [Yeoman](https://yeoman.io/) and the [Build a Banner Generator](https://github.com/johnfmorton/generator-buildabanner). You can post issues at the [GitHub page issues page](https://github.com/johnfmorton/docker-build-a-banner/issues).
+This image containerized [Yeoman](https://yeoman.io/) and the [Build A Banner generator](https://github.com/johnfmorton/generator-buildabanner). You can post issues at the [GitHub page issues page](https://github.com/johnfmorton/docker-build-a-banner/issues).
 
 ## How to use the image
 
@@ -20,9 +20,9 @@ If that seems like too much to remember, I agree! That's why I have it hidden be
 alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner'
 ```
 
-With the alias, you can just type `banner` to start the Docker container. The exposed ports are for the development server, port 8080, and it's live reload service, port 35729.
+With the alias, you can just type `banner` to start the Docker container. The exposed ports are for the development server, port 8080, and its live reload service, port 35729.
 
-I also keep another alias that will update the image. The only difference is the addtional `--pull always` flag. There is no option to only pull when the image is updated, so you must check manually.
+I also keep another alias that will update the image. The only difference is the additional `--pull always` flag. There is no option to only pull when the image is updated, so you must check manually.
 
 ```
 alias bannerupdate='docker container run -p 8080:8080 -p 35729:35729 -v "$PWD":/app -it --pull always --rm johnfmorton/yo-buildabanner'
@@ -30,7 +30,7 @@ alias bannerupdate='docker container run -p 8080:8080 -p 35729:35729 -v "$PWD":/
 
 ### Step 2
 
-You are now inside the container. To create your banner, tell Yeoman to use the Build A Banner generator.
+You are now inside the container. Tell Yeoman to use the Build A Banner generator to create your banner.
 
 ```
 yo buildabanner
