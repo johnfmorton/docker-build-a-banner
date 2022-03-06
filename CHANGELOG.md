@@ -1,6 +1,9 @@
-# Docker: Build A Banner
+# Docker: Build a Banner
 
 All notable changes to this project will be documented in this file.
+
+## 1.0.1 - 2022-03.06
+* Removed reference to the beta build from the README file.
 
 ## 1.0.0 - 2022-03.06
 * Updated to release version of the Build a Banner generator.

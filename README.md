@@ -7,17 +7,6 @@ This Dockerfile builds an image to run Yeoman and the BuildABanner generator in 
 ```
 alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm buildabanner'
 ```
-
-### Beta notes
-
-It is using a [beta version](https://www.npmjs.com/package/generator-buildabanner/v/2.1.0-beta.3) of Build A Banner.
-
-During testing of the beta, you will see the `@beta` tag in the Dockerfile.
-
-```
-npm install -g generator-buildabanner@beta
-```
-
 ### Building your own image from this Dockerfile
 
 ```
