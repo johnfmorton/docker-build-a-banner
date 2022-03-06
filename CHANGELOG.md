@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.0 - 2022-03.06
+* Updated to release version of the Build a Banner generator.
+
 ## 1.0.0 beta 5 - 2022-02.08
 ### Added
 * Fixed a typo in the shortcut to go up one level in the directory structure. Now `..` will go up one level as intended.

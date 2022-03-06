@@ -1,6 +1,6 @@
 # yo-buildabanner
 
-This image containerized [Yeoman](https://yeoman.io/) and the [Buildabanner Generator](https://github.com/johnfmorton/generator-buildabanner). It is currently in _beta_ and your feedback is welcome. You can post issues at the [GitHub page issues page](https://github.com/johnfmorton/docker-build-a-banner/issues).
+This image containerized [Yeoman](https://yeoman.io/) and the [Buildabanner Generator](https://github.com/johnfmorton/generator-buildabanner). You can post issues at the [GitHub page issues page](https://github.com/johnfmorton/docker-build-a-banner/issues).
 
 ## How to use the image
 
@@ -17,7 +17,7 @@ docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm
 If that seems like too much to remember, I agree! That's why I have it hidden behind an alias like this. This will go in your `rc` file, for example your `.bashrc` if you use bash, or `.zshrc` if you use zsh.
 
 ```
-alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta'
+alias banner='docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner'
 ```
 
 With the alias, you can just type `banner` to start the Docker container. The exposed ports are for the development server, port 8080, and it's live reload service, port 35729.
@@ -25,7 +25,7 @@ With the alias, you can just type `banner` to start the Docker container. The ex
 I also keep another alias that will update the image. The only difference is the addtional `--pull always` flag. There is no option to only pull when the image is updated, so you must check manually.
 
 ```
-alias bannerupdate='docker container run -p 8080:8080 -p 35729:35729 -v "$PWD":/app -it --pull always --rm johnfmorton/yo-buildabanner:beta'
+alias bannerupdate='docker container run -p 8080:8080 -p 35729:35729 -v "$PWD":/app -it --pull always --rm johnfmorton/yo-buildabanner'
 ```
 
 ### Step 2
