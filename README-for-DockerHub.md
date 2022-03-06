@@ -1,6 +1,6 @@
 # yo-buildabanner
 
-This image containerized [Yeoman](https://yeoman.io/) and the [Buildabanner Generator](https://github.com/johnfmorton/generator-buildabanner). You can post issues at the [GitHub page issues page](https://github.com/johnfmorton/docker-build-a-banner/issues).
+This image containerized [Yeoman](https://yeoman.io/) and the [Build a Banner Generator](https://github.com/johnfmorton/generator-buildabanner). You can post issues at the [GitHub page issues page](https://github.com/johnfmorton/docker-build-a-banner/issues).
 
 ## How to use the image
 
@@ -11,7 +11,7 @@ The default command for the image, `/bin/sh`, is give you a shell prompt. The sh
 From your terminal, navigate to an empty directory you want to build your banner in. Then enter:
 
 ```
-docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner:beta
+docker container run -p 8080:8080/tcp -p 35729:35729/tcp -v "$PWD":/app -it --rm johnfmorton/yo-buildabanner
 ```
 
 If that seems like too much to remember, I agree! That's why I have it hidden behind an alias like this. This will go in your `rc` file, for example your `.bashrc` if you use bash, or `.zshrc` if you use zsh.

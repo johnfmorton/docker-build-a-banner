@@ -1,4 +1,4 @@
-# Docker: Build A Banner
+# Docker: Build a Banner
 
 ## About
 
