@@ -16,7 +16,7 @@ RUN set -eux; \
     && \
     npm install gulp-cli -g \
     && \
-    npm install -g generator-buildabanner@beta \
+    npm install -g generator-buildabanner \
     && \
     # Fix permissions, ref: https://github.com/keystonejs/keystone-classic/issues/1566
     mkdir -p /root/.config/configstore \
